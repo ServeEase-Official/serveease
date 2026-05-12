@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ServeEase – Home Services at Your Doorstep</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a class="logo" href="index.html">Serve<span>Ease</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#professionals">Professionals</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn btn-outline" onclick="location.href='booking.html'">Book Now</button>
+    <button class="btn btn-primary" onclick="openLogin()">Login</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">⚡ Trusted by 2M+ Customers</div>
+    <h1>Home Services,<br/><span>Done Right.</span></h1>
+    <p>Book verified professionals for cleaning, repairs, beauty, and more — right at your doorstep. Fast, reliable, and affordable.</p>
+    <div class="hero-search">
+      <input type="text" placeholder="Search for a service (e.g. AC Repair, Cleaning...)"/>
+      <button onclick="location.href='services.html'">Search</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><h3>50K+</h3><p>Professionals</p></div>
+      <div class="stat"><h3>2M+</h3><p>Happy Customers</p></div>
+      <div class="stat"><h3>4.8★</h3><p>Avg Rating</p></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-card-grid">
+      <div class="hero-card" onclick="location.href='services.html'"><div class="icon">🧹</div><p>Home Cleaning</p></div>
+      <div class="hero-card" onclick="location.href='services.html'"><div class="icon">🔧</div><p>Plumbing</p></div>
+      <div class="hero-card" onclick="location.href='services.html'"><div class="icon">❄️</div><p>AC Service</p></div>
+      <div class="hero-card" onclick="location.href='services.html'"><div class="icon">💇</div><p>Salon & Spa</p></div>
+      <div class="hero-card" onclick="location.href='services.html'"><div class="icon">⚡</div><p>Electrician</p></div>
+      <div class="hero-card" onclick="location.href='services.html'"><div class="icon">🎨</div><p>Painting</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="tag">Our Services</div>
+    <h2>What Can We Help You With?</h2>
+    <p>From home repairs to personal care — we've got everything covered.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card" onclick="location.href='services.html'">
+      <div class="service-icon" style="background:#e8f5e9">🧹</div>
+      <h3>Home Cleaning</h3><p>Deep clean, sofa, bathroom & more</p>
+    </div>
+    <div class="service-card" onclick="location.href='services.html'">
+      <div class="service-icon" style="background:#e3f2fd">🔧</div>
+      <h3>Plumbing</h3><p>Leaks, pipe fitting & installations</p>
+    </div>
+    <div class="service-card" onclick="location.href='services.html'">
+      <div class="service-icon" style="background:#fff3e0">❄️</div>
+      <h3>AC Service</h3><p>Repair, installation & gas refill</p>
+    </div>
+    <div class="service-card" onclick="location.href='services.html'">
+      <div class="service-icon" style="background:#fce4ec">💇</div>
+      <h3>Salon & Spa</h3><p>Haircut, facial, waxing & more</p>
+    </div>
+    <div class="service-card" onclick="location.href='services.html'">
+      <div class="service-icon" style="background:#fffde7">⚡</div>
+      <h3>Electrician</h3><p>Wiring, switches & appliance repair</p>
+    </div>
+    <div class="service-card" onclick="location.href='services.html'">
+      <div class="service-icon" style="background:#f3e5f5">🎨</div>
+      <h3>Painting</h3><p>Interior, exterior & texture paint</p>
+    </div>
+    <div class="service-card" onclick="location.href='services.html'">
+      <div class="service-icon" style="background:#e0f7fa">🪟</div>
+      <h3>Carpentry</h3><p>Furniture repair & custom work</p>
+    </div>
+    <div class="service-card" onclick="location.href='services.html'">
+      <div class="service-icon" style="background:#e8eaf6">🐛</div>
+      <h3>Pest Control</h3><p>Cockroach, termite & rodent control</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="section-header">
+    <div class="tag">Process</div>
+    <h2>How ServeEase Works</h2>
+    <p>Book a service in under 60 seconds — it's that simple.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-icon">🔍</div>
+      <div class="step-num">1</div>
+      <h3>Choose a Service</h3>
+      <p>Browse from 100+ services across categories and pick what you need.</p>
+    </div>
+    <div class="step">
+      <div class="step-icon">📅</div>
+      <div class="step-num">2</div>
+      <h3>Pick Date & Time</h3>
+      <p>Select a convenient slot that fits your schedule — same day available.</p>
+    </div>
+    <div class="step">
+      <div class="step-icon">👷</div>
+      <div class="step-num">3</div>
+      <h3>Pro Arrives</h3>
+      <p>A verified, background-checked professional arrives at your door.</p>
+    </div>
+    <div class="step">
+      <div class="step-icon">✅</div>
+      <div class="step-num">4</div>
+      <h3>Relax & Review</h3>
+      <p>Sit back while the job gets done. Pay & rate after completion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONALS -->
+<section class="pros" id="professionals">
+  <div class="section-header">
+    <div class="tag">Top Rated</div>
+    <h2>Meet Our Professionals</h2>
+    <p>Verified, trained, and background-checked experts ready to serve you.</p>
+  </div>
+  <div class="pros-grid">
+    <div class="pro-card">
+      <div class="pro-avatar" style="background:#e8f5e9">👨‍🔧</div>
+      <div class="pro-info">
+        <h3>Rajesh Kumar</h3>
+        <div class="role">Plumbing Expert</div>
+        <div class="pro-meta">
+          <span class="rating">⭐ 4.9</span>
+          <span class="jobs">320 jobs done</span>
+        </div>
+        <span class="pro-badge">✔ Verified Pro</span>
+      </div>
+    </div>
+    <div class="pro-card">
+      <div class="pro-avatar" style="background:#fce4ec">👩‍💼</div>
+      <div class="pro-info">
+        <h3>Priya Sharma</h3>
+        <div class="role">Salon Specialist</div>
+        <div class="pro-meta">
+          <span class="rating">⭐ 4.8</span>
+          <span class="jobs">510 jobs done</span>
+        </div>
+        <span class="pro-badge">✔ Verified Pro</span>
+      </div>
+    </div>
+    <div class="pro-card">
+      <div class="pro-avatar" style="background:#fffde7">👨‍🔬</div>
+      <div class="pro-info">
+        <h3>Amit Verma</h3>
+        <div class="role">AC Technician</div>
+        <div class="pro-meta">
+          <span class="rating">⭐ 4.9</span>
+          <span class="jobs">280 jobs done</span>
+        </div>
+        <span class="pro-badge">✔ Verified Pro</span>
+      </div>
+    </div>
+    <div class="pro-card">
+      <div class="pro-avatar" style="background:#e3f2fd">👩‍🔧</div>
+      <div class="pro-info">
+        <h3>Sunita Rao</h3>
+        <div class="role">Cleaning Expert</div>
+        <div class="pro-meta">
+          <span class="rating">⭐ 4.7</span>
+          <span class="jobs">430 jobs done</span>
+        </div>
+        <span class="pro-badge">✔ Verified Pro</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="section-header">
+    <div class="tag">Reviews</div>
+    <h2>What Our Customers Say</h2>
+    <p>Real reviews from real customers who love ServeEase.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"The AC technician arrived on time and fixed the issue in under an hour. Absolutely professional service!"</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">😊</div>
+        <div class="reviewer-info"><h4>Ananya Mehta</h4><span>Delhi</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"Booked a deep cleaning session and I'm blown away. My house looks brand new. Will definitely book again!"</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">😄</div>
+        <div class="reviewer-info"><h4>Rohan Gupta</h4><span>Mumbai</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★☆</div>
+      <p>"The salon at home experience was amazing. Priya was very skilled and the products used were top quality."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">🙂</div>
+        <div class="reviewer-info"><h4>Kavya Nair</h4><span>Bangalore</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP BANNER -->
+<div class="app-banner">
+  <div>
+    <h2>Get the ServeEase App</h2>
+    <p>Book services, track your professional in real-time, and manage bookings — all from your phone.</p>
+    <div class="app-btns">
+      <div class="app-btn"><span class="app-icon">🍎</span><span>App Store</span></div>
+      <div class="app-btn"><span class="app-icon">▶️</span><span>Google Play</span></div>
+    </div>
+  </div>
+  <div class="app-mockup">📱</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">Serve<span style="color:#fff">Ease</span></a>
+      <p>India's most trusted home services platform. Quality service, every time.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Home Cleaning</a></li>
+        <li><a href="services.html">Plumbing</a></li>
+        <li><a href="services.html">Electrician</a></li>
+        <li><a href="services.html">AC Service</a></li>
+        <li><a href="services.html">Salon & Spa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 ServeEase. All rights reserved.</span>
+    <div class="social-links">
+      <a href="#">📘</a><a href="#">📸</a><a href="#">🐦</a><a href="#">▶️</a>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN / SIGNUP MODAL -->
+<div class="modal-overlay" id="authModal">
+  <div class="auth-modal">
+    <button class="auth-close" onclick="closeAuth()">✕</button>
+
+    <!-- TABS -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tabLogin" onclick="switchTab('login')">Login</button>
+      <button class="auth-tab" id="tabSignup" onclick="switchTab('signup')">Sign Up</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div id="loginForm">
+      <div class="auth-header">
+        <div class="auth-icon">👋</div>
+        <h2>Welcome Back!</h2>
+        <p>Login to manage your bookings</p>
+      </div>
+      <div class="form-group">
+        <label>Phone / Email</label>
+        <input type="text" id="loginEmail" placeholder="Enter phone or email"/>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <div class="pass-wrap">
+          <input type="password" id="loginPass" placeholder="Enter password"/>
+          <span class="pass-toggle" onclick="togglePass('loginPass', this)">👁️</span>
+        </div>
+      </div>
+      <div class="auth-forgot"><a href="#" onclick="showForgot()">Forgot Password?</a></div>
+      <button class="btn btn-primary btn-lg" style="width:100%" onclick="doLogin()">Login</button>
+      <div class="auth-divider"><span>or continue with</span></div>
+      <div class="social-auth">
+        <button class="social-btn" onclick="socialLogin('Google')">🌐 Google</button>
+        <button class="social-btn" onclick="socialLogin('Facebook')">📘 Facebook</button>
+      </div>
+      <p class="auth-switch">Don't have an account? <a href="#" onclick="switchTab('signup')">Sign Up</a></p>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div id="signupForm" style="display:none">
+      <div class="auth-header">
+        <div class="auth-icon">🎉</div>
+        <h2>Create Account</h2>
+        <p>Join 2M+ happy customers</p>
+      </div>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="signupName" placeholder="Enter your full name"/>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="signupPhone" placeholder="+91 XXXXX XXXXX"/>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="signupEmail" placeholder="Enter your email"/>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <div class="pass-wrap">
+          <input type="password" id="signupPass" placeholder="Create a password"/>
+          <span class="pass-toggle" onclick="togglePass('signupPass', this)">👁️</span>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width:100%" onclick="doSignup()">Create Account</button>
+      <div class="auth-divider"><span>or continue with</span></div>
+      <div class="social-auth">
+        <button class="social-btn" onclick="socialLogin('Google')">🌐 Google</button>
+        <button class="social-btn" onclick="socialLogin('Facebook')">📘 Facebook</button>
+      </div>
+      <p class="auth-switch">Already have an account? <a href="#" onclick="switchTab('login')">Login</a></p>
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="js/firebase.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

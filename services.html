@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – ServeEase</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a class="logo" href="index.html">Serve<span>Ease</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#how-it-works">How It Works</a></li>
+    <li><a href="index.html#professionals">Professionals</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn btn-outline" onclick="location.href='booking.html'">Book Now</button>
+    <button class="btn btn-primary" onclick="openLogin()">Login</button>
+  </div>
+</nav>
+
+<!-- LOGIN / SIGNUP MODAL -->
+<div class="modal-overlay" id="authModal">
+  <div class="auth-modal">
+    <button class="auth-close" onclick="closeAuth()">✕</button>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tabLogin" onclick="switchTab('login')">Login</button>
+      <button class="auth-tab" id="tabSignup" onclick="switchTab('signup')">Sign Up</button>
+    </div>
+    <div id="loginForm">
+      <div class="auth-header"><div class="auth-icon">👋</div><h2>Welcome Back!</h2><p>Login to manage your bookings</p></div>
+      <div class="form-group"><label>Phone / Email</label><input type="text" id="loginEmail" placeholder="Enter phone or email"/></div>
+      <div class="form-group"><label>Password</label><div class="pass-wrap"><input type="password" id="loginPass" placeholder="Enter password"/><span class="pass-toggle" onclick="togglePass('loginPass',this)">👁️</span></div></div>
+      <div class="auth-forgot"><a href="#">Forgot Password?</a></div>
+      <button class="btn btn-primary btn-lg" style="width:100%" onclick="doLogin()">Login</button>
+      <div class="auth-divider"><span>or continue with</span></div>
+      <div class="social-auth"><button class="social-btn" onclick="socialLogin('Google')">🌐 Google</button><button class="social-btn" onclick="socialLogin('Facebook')">📘 Facebook</button></div>
+      <p class="auth-switch">Don't have an account? <a href="#" onclick="switchTab('signup')">Sign Up</a></p>
+    </div>
+    <div id="signupForm" style="display:none">
+      <div class="auth-header"><div class="auth-icon">🎉</div><h2>Create Account</h2><p>Join 2M+ happy customers</p></div>
+      <div class="form-group"><label>Full Name</label><input type="text" id="signupName" placeholder="Enter your full name"/></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" id="signupPhone" placeholder="+91 XXXXX XXXXX"/></div>
+      <div class="form-group"><label>Email</label><input type="email" id="signupEmail" placeholder="Enter your email"/></div>
+      <div class="form-group"><label>Password</label><div class="pass-wrap"><input type="password" id="signupPass" placeholder="Create a password"/><span class="pass-toggle" onclick="togglePass('signupPass',this)">👁️</span></div></div>
+      <button class="btn btn-primary btn-lg" style="width:100%" onclick="doSignup()">Create Account</button>
+      <div class="auth-divider"><span>or continue with</span></div>
+      <div class="social-auth"><button class="social-btn" onclick="socialLogin('Google')">🌐 Google</button><button class="social-btn" onclick="socialLogin('Facebook')">📘 Facebook</button></div>
+      <p class="auth-switch">Already have an account? <a href="#" onclick="switchTab('login')">Login</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <h1>All Services</h1>
+  <p>Browse 100+ professional home services — book in seconds.</p>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="cleaning">Cleaning</button>
+  <button class="filter-btn" data-filter="repair">Repair & Maintenance</button>
+  <button class="filter-btn" data-filter="beauty">Beauty & Wellness</button>
+  <button class="filter-btn" data-filter="pest">Pest Control</button>
+  <button class="filter-btn" data-filter="painting">Painting</button>
+</div>
+
+<!-- SERVICES LIST -->
+<div class="services-list">
+  <div class="service-list-grid" id="servicesGrid">
+
+    <div class="service-list-card" data-cat="cleaning">
+      <div class="card-img" style="background:#e8f5e9">🧹</div>
+      <div class="card-body">
+        <h3>Home Deep Cleaning</h3>
+        <p>Full home deep clean including kitchen, bathrooms, and all rooms. Eco-friendly products used.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹999 <span>/ session</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Home+Deep+Cleaning'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="cleaning">
+      <div class="card-img" style="background:#e0f7fa">🛋️</div>
+      <div class="card-body">
+        <h3>Sofa & Carpet Cleaning</h3>
+        <p>Professional steam cleaning for sofas, carpets, and upholstery. Removes stains and odors.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹599 <span>/ session</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Sofa+Cleaning'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="cleaning">
+      <div class="card-img" style="background:#f3e5f5">🪟</div>
+      <div class="card-body">
+        <h3>Window & Glass Cleaning</h3>
+        <p>Streak-free cleaning for all windows, glass doors, and mirrors inside and outside.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹399 <span>/ session</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Window+Cleaning'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="repair">
+      <div class="card-img" style="background:#e3f2fd">🔧</div>
+      <div class="card-body">
+        <h3>Plumbing Repair</h3>
+        <p>Fix leaks, blocked drains, pipe fitting, tap replacement, and all plumbing issues.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹299 <span>/ visit</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Plumbing+Repair'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="repair">
+      <div class="card-img" style="background:#fffde7">⚡</div>
+      <div class="card-body">
+        <h3>Electrician</h3>
+        <p>Wiring, switch board repair, fan installation, short circuit fixing and more.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹249 <span>/ visit</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Electrician'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="repair">
+      <div class="card-img" style="background:#fff3e0">❄️</div>
+      <div class="card-body">
+        <h3>AC Service & Repair</h3>
+        <p>AC servicing, gas refill, installation, and repair for all brands.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹499 <span>/ session</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=AC+Service'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="repair">
+      <div class="card-img" style="background:#e8eaf6">🪑</div>
+      <div class="card-body">
+        <h3>Carpentry</h3>
+        <p>Furniture repair, custom woodwork, door fixing, and cabinet installation.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹349 <span>/ visit</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Carpentry'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="beauty">
+      <div class="card-img" style="background:#fce4ec">💇</div>
+      <div class="card-body">
+        <h3>Women's Salon at Home</h3>
+        <p>Haircut, facial, waxing, threading, and full beauty services at your home.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹699 <span>/ session</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Womens+Salon'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="beauty">
+      <div class="card-img" style="background:#e8f5e9">💆</div>
+      <div class="card-body">
+        <h3>Massage & Spa</h3>
+        <p>Relaxing full body massage, head massage, and spa treatments at home.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹899 <span>/ session</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Massage+Spa'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="beauty">
+      <div class="card-img" style="background:#e3f2fd">✂️</div>
+      <div class="card-body">
+        <h3>Men's Grooming</h3>
+        <p>Haircut, beard trim, facial, and grooming services at your doorstep.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹399 <span>/ session</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Mens+Grooming'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="pest">
+      <div class="card-img" style="background:#fff3e0">🐛</div>
+      <div class="card-body">
+        <h3>Cockroach Control</h3>
+        <p>Gel-based treatment for complete cockroach elimination. Safe for kids and pets.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹799 <span>/ treatment</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Cockroach+Control'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="pest">
+      <div class="card-img" style="background:#fce4ec">🐀</div>
+      <div class="card-body">
+        <h3>Rodent Control</h3>
+        <p>Effective rodent trapping and prevention treatment for homes and offices.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹999 <span>/ treatment</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Rodent+Control'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="painting">
+      <div class="card-img" style="background:#e8eaf6">🎨</div>
+      <div class="card-body">
+        <h3>Interior Painting</h3>
+        <p>Full room or home interior painting with premium paints and clean finish.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹12/sqft <span>onwards</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Interior+Painting'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service-list-card" data-cat="painting">
+      <div class="card-img" style="background:#e0f7fa">🏠</div>
+      <div class="card-body">
+        <h3>Exterior Painting</h3>
+        <p>Weather-resistant exterior painting for walls, gates, and compound walls.</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">₹15/sqft <span>onwards</span></div>
+        <button class="btn btn-primary" onclick="location.href='booking.html?service=Exterior+Painting'">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">Serve<span style="color:#fff">Ease</span></a>
+      <p>India's most trusted home services platform. Quality service, every time.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Home Cleaning</a></li>
+        <li><a href="#">Plumbing</a></li>
+        <li><a href="#">Electrician</a></li>
+        <li><a href="#">AC Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 ServeEase. All rights reserved.</span>
+    <div class="social-links">
+      <a href="#">📘</a><a href="#">📸</a><a href="#">🐦</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/firebase.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
